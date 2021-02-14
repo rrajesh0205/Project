@@ -59,18 +59,21 @@
 	<!-- page section start -->
 	<section class="page-section">
 		<div class="container">
-			<form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <br><br>
-				<div class="row">
-                    <div class="col-md-12 ">
-                        <h4 class="animate__animated animate__fadeInUp">
-						{{ form.as_p }}	
-						</h4>
-                    </div>				
-				</div>				
-					<button type="submit" value="Submit" class="site-btn">Create blog entry</button>
-			</form>
+			<div class="delmenu">
+				<form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<br><br>
+					<div class="row">
+						<div class="col-md-12 ">
+							<h4 class="animate__animated animate__fadeInUp">
+							{{ form.as_p }}	
+							</h4>
+						</div>				
+					</div>				
+						<button type="submit" value="Submit" class="site-btn">Create blog entry</button>
+				</form>
+				<br>
+			</div>
 		</div>
 	</section>
 	<!-- page section end -->
