@@ -50,58 +50,57 @@
 		</div>
 	</header>
 	<!-- header section end -->	
+	
 
 	<!-- page section start -->
-<section class="page-section">
-	<div class="container">
-		<div class="row">
-       		<div class="col-md-12">
-				{% for article in object_list|dictsortreversed:"created_at" %}
-					<div class="article">
-						<div class="modmenu">
-							<a href="{% url 'article_edit' article.pk %}" class="tooltipedit"> <span>Edit</span>
-							<img src="{% static 'edit.png' %}" width = "16" height = "16"/></a> &nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="{% url 'delete' article.pk %}" class="tooltipdelete" ><span>Delete</span>
-							<img src="{% static 'trash.png' %}" width = "16" height = "16"/></a> &nbsp;&nbsp;
-						</div>					
-							<h6>
-							<a href="{% url 'detail' article.pk %}">
-							{{ article.title }}
-							</a>
-							</h6>
-							</u>
-						<div class="artbody">
-							{{ article.body }}
-						</div>
-						<br>
-							{% if article.img.url != Null %}
-								<center>
-                                    <img src = {{article.img.url}} style="width: 50%; 
-                                    border: 10px solid white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
-                                    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
-                                    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);  " />
-                                    </img>
-                                </center>
-							{% endif %}
-							<br><br>
-							<div class="article1">
-								&nbsp;
-								{{ article.created_at }}
-								<br>
-								{% if article.updated_at != article.created_at %}
-									Update:&nbsp;{{ article.updated_at }}
-								{% endif %}
+	<section class="page-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					{% for article in object_list|dictsortreversed:"created_at" %}
+						<div class="article">
+							<div class="modmenu">
+								<a href="{% url 'article_edit' article.pk %}" class="tooltipedit"> <span>Edit</span>
+								<img src="{% static 'edit.png' %}" width = "16" height = "16"/></a> &nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="{% url 'delete' article.pk %}" class="tooltipdelete" ><span>Delete</span>
+								<img src="{% static 'trash.png' %}" width = "16" height = "16"/></a> &nbsp;&nbsp;
+							</div>					
+								<h6>
+								<a href="{% url 'detail' article.pk %}">
+								{{ article.title }}
+								</a>
+								</h6>
+								</u>
+							<div class="artbody">
+								{{ article.body }}
 							</div>
-					</div>
-				{% endfor %}
+							<br>
+								{% if article.img.url != Null %}
+									<center>
+										<img src = {{article.img.url}} style="width: 50%; 
+										border: 10px solid white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+										-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+										-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);  " />
+										</img>
+									</center>
+								{% endif %}
+								<br><br>
+								<div class="article1">
+									&nbsp;
+									{{ article.created_at }}
+									<br>
+									{% if article.updated_at != article.created_at %}
+										Update:&nbsp;{{ article.updated_at }}
+									{% endif %}
+								</div>
+						</div>
+					{% endfor %}
+				</div>
 			</div>
-		</div>
-	</div>				
-</section>
+		</div>				
+	</section>
 
-<!-- page section end -->
-
-	
+	<!-- page section end -->
 
 
 	<!--====== Javascripts & Jquery ======-->
