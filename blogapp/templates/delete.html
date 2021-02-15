@@ -53,36 +53,36 @@
 
 
 	<!-- page section start -->
-<section class="page-section">
-	<div class="container">
-		<div class="row">
-            <div class="col-md-12">
-                <div class="delmenu">
-                        <h4><a href="{% url 'detail' article.pk %}">{{ article.title }}</h4>
-                            <center>
-                                <br>
-                                {% if article.img.url != Null %}
-                                <img src = {{article.img.url}} style="width: 30%;
-                                border: 15px solid white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
-                                -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
-                                -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);  " />
-                                </img>
-                            </center>
-                            {% endif %}
-                        </a>Delete?</h2>
-                        <form method="post">{% csrf_token %}
-                        Are you sure you want to delete "{{ article.title }}" ?<br>
-                        <br>
-                        <button type="submit" value="Delete this blog?" class="site-btn">Delete this blog?</button>
-				    </form>
-					<br>
-				</div>
-            </div> 
-        </div> 
-    </div> 
-</section>
+	<section class="page-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="delmenu">
+							<h4><a href="{% url 'detail' article.pk %}">{{ article.title }}</h4>
+								<center>
+									<br>
+									{% if article.img.url != Null %}
+									<img src = {{article.img.url}} style="width: 30%;
+									border: 15px solid white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+									-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+									-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);  " />
+									</img>
+								</center>
+								{% endif %}
+							</a>Delete?</h2>
+							<form method="post">{% csrf_token %}
+							Are you sure you want to delete "{{ article.title }}" ?<br>
+							<br>
+							<button type="submit" value="Delete this blog?" class="site-btn">Delete this blog?</button>
+						</form>
+						<br>
+					</div>
+				</div> 
+			</div> 
+		</div> 
+	</section>
 
-<!-- page section end -->
+	<!-- page section end -->
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="{% static 'css/js/jquery-2.1.4.min.js' %}"></script>
