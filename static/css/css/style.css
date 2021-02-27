@@ -859,7 +859,7 @@ white-space: pre-line;
   font-weight: 400;
   letter-spacing: 2px;
   color: black;   
-  text-align: right;
+  /*text-align: right;*/
   
 }
 

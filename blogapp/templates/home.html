@@ -83,9 +83,9 @@
 										</img>
 									</center>
 								{% endif %}
+								<br>
 								<div class="article1">
-									&nbsp;
-									{{ article.created_at }}
+									Posted&nbsp;:&nbsp;{{ article.created_at }}
 									<br>
 									{% if article.updated_at != article.created_at %}
 										Update:&nbsp;{{ article.updated_at }}
